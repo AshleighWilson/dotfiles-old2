@@ -17,6 +17,7 @@ fpath+=$HOME/.config/zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 PURE_PROMPT_SYMBOL="➜"
+zstyle :prompt:pure:git:stash show yes
 
 # dotbare
 zinit light kazhala/dotbare
