@@ -13,9 +13,8 @@ autoload -Uz _zinit
 ### End of Zinit's installer chunk
 
 # pure prompt
-fpath+=$HOME/.config/zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+zinit light sindresorhus/pure
 PURE_PROMPT_SYMBOL="➜"
 zstyle :prompt:pure:git:stash show yes
 
@@ -25,3 +24,22 @@ export DOTBARE_DIR="$HOME/.config/dotbare"
 
 # custom alias definitions
 source $HOME/.config/zsh/aliases
+
+# zsh auto complete
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+compinit
+_comp_options+=(globdots)
+
+# zsh auto suggestions
+zinit light zsh-users/zsh-autosuggestions
+
+# syntax highlighting
+zinit light zsh-users/zsh-syntax-highlighting
+
+# correct keys
+bindkey "^[[3~" delete-char
+
+# use emacs mode
+bindkey -e
+export KEYTIMEOUT=1
