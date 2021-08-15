@@ -4,9 +4,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'itchyny/lightline.vim' " A light and configurable statusline.
 	Plug 'airblade/vim-gitgutter' " Git diff in the left column.
 	Plug 'tpope/vim-commentary' " Easily comment code.
-  Plug 'tpope/vim-fugitive'
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'tpope/vim-fugitive' " Git support
+  Plug 'arcticicestudio/nord-vim' " Nord colorscheme
   Plug 'jpalardy/vim-slime' " Send to tmux
+  Plug 'ap/vim-css-color' " Highlight colors
 call plug#end()
 
 set number " Show line numbers
