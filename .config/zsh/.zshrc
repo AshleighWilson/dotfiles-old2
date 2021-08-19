@@ -41,5 +41,5 @@ zinit light zsh-users/zsh-syntax-highlighting
 bindkey "^[[3~" delete-char
 
 # use emacs mode
-bindkey -e
+bindkey -v
 export KEYTIMEOUT=1
