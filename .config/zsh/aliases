@@ -2,7 +2,7 @@ alias xbee1="picocom --echo /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL033E2Q-
 alias xbee2="picocom --echo /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A105TFE1-if00-port0 --omap crcrlf"
 alias xbee3="picocom --echo /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL033E26-if00-port0 --omap crcrlf"
 
-alias arduino="picocom --echo /dev/serial/by-id/usb-Arduino__www.arduino.cc__0043_95232343833351316042-if00 --omap crcrlf"
+alias arduino="picocom --echo /dev/serial/by-id/usb-Arduino__www.arduino.cc__0043_75735323230351516152-if00 --omap crcrlf -b 115200"
 
 alias config=dotbare
 

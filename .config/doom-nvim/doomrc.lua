@@ -23,7 +23,7 @@ local doom = {
     -- "show_registers",  -- popup that shows register contents
   },
   doom = {
-    -- "neorg",           -- Life Organization Tool
+    "neorg",           -- Life Organization Tool
     -- "runner",          -- Open a REPL for the current language or run the current file
     -- "compiler",        -- Compile (and run) your code with just pressing three keys!
   },
