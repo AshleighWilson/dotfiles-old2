@@ -1,3 +1,14 @@
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -12,34 +23,9 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
-# pure prompt
-zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
-zinit light sindresorhus/pure
-PURE_PROMPT_SYMBOL="➜"
-zstyle :prompt:pure:git:stash show yes
-
 # dotbare
 zinit light kazhala/dotbare
 export DOTBARE_DIR="$HOME/.config/dotbare"
 
 # custom alias definitions
 source $HOME/.config/zsh/aliases
-
-# zsh auto complete
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-compinit
-_comp_options+=(globdots)
-
-# zsh auto suggestions
-zinit light zsh-users/zsh-autosuggestions
-
-# syntax highlighting
-zinit light zsh-users/zsh-syntax-highlighting
-
-# correct keys
-bindkey "^[[3~" delete-char
-
-# use emacs mode
-bindkey -v
-export KEYTIMEOUT=1
