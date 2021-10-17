@@ -7,5 +7,5 @@ source ~/.zinit/bin/zinit.zsh
 zinit self-update
 
 # Clone dot files
-git clone https://github.com/AshleighWilson/dotfiles.git ~/.config/dotbare
+git clone https://github.com/AshleighWilson/dotfiles.git ~
 git --git-dir=$HOME/.config/dotbare remote set-url origin git@github.com:AshleighWilson/dotfiles.git
