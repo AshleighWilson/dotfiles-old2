@@ -54,7 +54,7 @@ local doom = {
     -- "javascript",      -- JavaScript support
     -- "typescript",      -- TypeScript support
     -- "bash",            -- The terminal gods language
-    -- "python +lsp",     -- Python support + lsp
+    "python +lsp",     -- Python support + lsp
     -- "ruby",            -- Look ma, I love the gems!
     "lua",                -- Support for our gods language
     -- "elixir",          -- Build scalable and maintainable software
