@@ -1,16 +1,6 @@
 # Zinit plugin manager. To be loaded before compinit.
-source ~/.zinit/bin/zinit.zsh
-
-# Use powerline
-USE_POWERLINE="true"
-# Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
-fi
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
 
 # dotbare
 zinit light kazhala/dotbare
@@ -18,3 +8,14 @@ export DOTBARE_DIR="$HOME/.config/dotbare"
 
 # custom alias definitions
 source $HOME/.config/zsh/aliases
+
+# Pure prompt
+autoload -U promptinit; promptinit
+prompt pure
+
+PURE_PROMPT_SYMBOL="➜"
+zstyle :prompt:pure:git:stash show yes
+zstyle :prompt:pure:prompt:success color 'green'
+
+# PATH env variable
+path+=('/home/ashleigh/.platformio/penv/bin')
