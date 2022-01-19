@@ -1,9 +1,11 @@
 #!/usr/bin/env zsh
 
 # Install zinit, a ZSH plugin manager
-mkdir ~/.zinit
-git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
-source ~/.zinit/bin/zinit.zsh
+#
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+mkdir -p "$(dirname $ZINIT_HOME)"
+git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 zinit self-update
 
 # Clone dot files
