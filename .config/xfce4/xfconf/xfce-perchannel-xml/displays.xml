@@ -40,4 +40,9 @@
       </property>
     </property>
   </property>
+  <property name="backdrop" type="empty">
+    <property name="screen0" type="empty">
+      <property name="xinerama-stretch" type="bool" value="true"/>
+    </property>
+  </property>
 </channel>
