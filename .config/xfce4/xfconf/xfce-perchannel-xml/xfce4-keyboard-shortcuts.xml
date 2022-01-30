@@ -56,6 +56,18 @@
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Alt&gt;Return" type="string" value="xfce4-terminal --drop-down -e &quot;tmux new -A -s scratch&quot;"/>
       <property name="&lt;Shift&gt;&lt;Alt&gt;Return" type="string" value="xfce4-terminal -e &quot;tmux new&quot;"/>
+      <property name="ISO_Level3_Shift" type="empty">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="Alt_L" type="empty">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="ssharp" type="empty">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="&lt;Super&gt;s" type="string" value="pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1.monitor">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
     </property>
   </property>
   <property name="xfwm4" type="empty">

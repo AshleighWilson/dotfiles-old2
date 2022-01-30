@@ -11,3 +11,5 @@ alias jekyll-drafts="bundle exec jekyll serve --drafts"
 
 alias plank-restore="cat $HOME/.config/plank/config.ini | dconf load /net/launchpad/plank/docks/"
 alias plank-save="dconf dump /net/launchpad/plank/docks/ > ~/.config/plank/config.ini"
+
+alias snd-nvidia="pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1.monitor"

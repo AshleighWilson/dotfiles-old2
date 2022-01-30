@@ -71,6 +71,7 @@
     <property name="plugin-2" type="string" value="notification-plugin"/>
     <property name="plugin-4" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="clipman"/>
         <value type="string" value="virt-manager"/>
         <value type="string" value="thunar"/>
         <value type="string" value="xfce4-power-manager"/>
@@ -98,7 +99,16 @@
     </property>
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance1725;chromium.instance1737;chromium.instance1769;chromium.instance1828;chromium.instance1940;chromium.instance69570;chromium.instance77962;firefox.instance1573;firefox.instance1614;plasma-browser-integration"/>
+      <property name="mpris-players" type="string" value="chromium.instance1725;chromium.instance1737;chromium.instance1769;chromium.instance1828;chromium.instance1940;chromium.instance69570;chromium.instance77962;firefox.instance1573;firefox.instance1614;firefox.instance20467;plasma-browser-integration"/>
+    </property>
+    <property name="clipman" type="empty">
+      <property name="settings" type="empty">
+        <property name="add-primary-clipboard" type="bool" value="false"/>
+        <property name="save-on-quit" type="bool" value="false"/>
+      </property>
+      <property name="tweaks" type="empty">
+        <property name="never-confirm-history-clear" type="bool" value="true"/>
+      </property>
     </property>
   </property>
 </channel>
