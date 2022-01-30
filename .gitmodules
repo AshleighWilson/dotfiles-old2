@@ -1,8 +1,8 @@
 [submodule ".config/ulauncher/user-themes/nord"]
 	path = .config/ulauncher/user-themes/nord
 	url = https://github.com/KiranWells/ulauncher-nord/
-[submodule "Apps/AssassinFix"]
-	path = Apps/AssassinFix
+[submodule "Apps/AssassinsCreedIIFix"]
+	path = Apps/AssassinsCreedIIFix
 	url = https://github.com/smintman/assfix
 [submodule "Apps/ds360"]
 	path = Apps/ds360
