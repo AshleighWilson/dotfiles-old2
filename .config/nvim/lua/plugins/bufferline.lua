@@ -1,5 +1,5 @@
 -- https://github.com/akinsho/bufferline.nvim
-packer.use {
+PACKER.use {
 	'akinsho/bufferline.nvim',
 	requires = {'kyazdani42/nvim-web-devicons'},
 	config = function()

@@ -1,5 +1,5 @@
 -- https://github.com/NTBBloodbath/doom-one.nvim
-packer.use({
+PACKER.use({
     'NTBBloodbath/doom-one.nvim',
     config = function()
         require('doom-one').setup({

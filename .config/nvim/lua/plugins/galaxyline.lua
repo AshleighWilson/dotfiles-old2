@@ -1,5 +1,5 @@
 -- https://github.com/NTBBloodbath/galaxyline.nvim
-packer.use {
+PACKER.use {
 	"NTBBloodbath/galaxyline.nvim",
   	-- your statusline
   	config = function()

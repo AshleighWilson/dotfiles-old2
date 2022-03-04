@@ -1,5 +1,5 @@
 -- Documentation: https://github.com/lukas-reineke/indent-blankline.nvim
-packer.use {
+PACKER.use {
 	'lukas-reineke/indent-blankline.nvim',
 	requires = {},
 	config = function()
@@ -10,3 +10,4 @@ packer.use {
 		}
 	end
 }
+

@@ -1,5 +1,5 @@
 -- https://github.com/folke/todo-comments.nvim
-packer.use {
+PACKER.use {
 	'folke/todo-comments.nvim',
 	requires = "nvim-lua/plenary.nvim",
 	config = function()
