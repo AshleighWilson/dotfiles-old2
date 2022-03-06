@@ -59,6 +59,7 @@ fi
 OPTIONS=($(whiptail --title "Generic Options" --checklist --separate-output "Choose the options to install/configure" 20 70 10 3>&1 1>&2 2>&3 \
 	"PACMAN_MIRRORS" "Find fastest mirrors for pacman" OFF \
 	"PLANK_CONFIG" "Load plank congifuration" OFF \
+	"ESPANSO_SERVICE" "Enable the espanso user service" OFF \
 	))
 
 for choice in "${OPTIONS[@]}"; do
@@ -68,6 +69,9 @@ for choice in "${OPTIONS[@]}"; do
 			;;
 	    "PLANK_CONFIG")
 			cat $HOME/.config/plank/config.ini | dconf load /net/launchpad/plank/docks/
+			;;
+	    "ESPANSO_SERVICE")
+			systemctl --user enable --now espanso.service
 			;;
 	esac
 done
