@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=PostInstallSetup
+Comment=Script for post installation setup.
+Exec=$HOME/.config/scripts/postinstall.sh
+RunHook=0
+StartupNotify=false
+Terminal=true
+Hidden=false
+

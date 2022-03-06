@@ -1,0 +1,9 @@
+[Unit]
+Description=Macbook Pro 14,2 Setup
+
+[Service]
+ExecStart=/home/ashleigh/.config/scripts/mbp-startup.sh
+
+[Install]
+WantedBy=multi-user.target
+
