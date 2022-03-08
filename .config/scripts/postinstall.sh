@@ -48,7 +48,7 @@ fi
 UPDATE=$(whiptail --title "Update System" --yesno "Do you want to update the system packages?" 10 60 10 3>&1 1>&2 2>&3)
 if [ $? -eq 0 ]; then
 	# echo $PASSWORD | sudo -k -S pamac update --no-confirm
-	paru --noconfirm
+	paru
 	if [ $? -ne 0 ]; then
 		echo "Update failed. Exiting."
 		exit 1
@@ -80,27 +80,32 @@ done
 if [[ $DEVICE == "MBP" ]]; then
 	MBP_OPTIONS=($(whiptail --title "MBP Specific Options" --checklist --separate-output "Choose the options to install/configure" 20 70 10 3>&1 1>&2 2>&3 \
 		"TOUCHBAR" "MacBook Pro 14,2 Touchpad Driver" OFF \
-		"EFI" "Apple MacBook 14,2 EFI Drivers" OFF))
+		"SOUND" "Apple MacBook 14,2 Soundcard Drivers" OFF))
 
 	for mbp_choice in "${MBP_OPTIONS[@]}"; do
 		case $mbp_choice in
-				"TOUCHBAR")
+			"TOUCHBAR")
 				paru -S macbook12-spi-driver-dkms
 				sudo mount /dev/nvme0n1p1 /mnt
 				sudo cp -R AppleEFI/Apple /mnt/EFI/
 				sudo umount /mnt
 				systemctl --user enable mbp-startup.service
 				;;
-			"Sound")
-				git clone https://github.com/AshleighWilson/snd_hda_macbookpro
-				cd snd_hda_macbookpro
-				./install.cirrus.driver.sh
+			"SOUND")
+				# git clone https://github.com/AshleighWilson/snd_hda_macbookpro
+				cd $HOME/Apps/snd_hda_macbookpro
+				sudo ./install.cirrus.driver.sh
 				sudo echo "blacklist snd_hda_codec_cs8409" >> /etc/modprobe.d/blacklist.conf
 				;;
 		esac
 	done
 fi
 
+# Disable this script from running on login.
+DISABLE_POSTINSTALL=$(whiptail --title "Disable Post Install" --yesno "Do you want to disable this post installer on log in?" 10 60 10 3>&1 1>&2 2>&3)
+if [ $? -eq 0 ]; then
+	rm ~/.config/autostart/PostInstall.desktop
+fi
 # Install software
 # BASE_SOFTWARE=($(whiptail --title "Software" --checklist --separate-output "Choose the software to install" 20 70 10 3>&1 1>&2 2>&3 \
 # 	"ESPANSO" "Privacy focused text expander" ON \
