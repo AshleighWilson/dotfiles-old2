@@ -7,3 +7,6 @@
 [submodule "Apps/ds360"]
 	path = Apps/ds360
 	url = https://github.com/yoyossef/ds360.git
+[submodule "Apps/snd_hda_macbookpro"]
+	path = Apps/snd_hda_macbookpro
+	url = https://github.com/AshleighWilson/snd_hda_macbookpro
