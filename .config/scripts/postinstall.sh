@@ -120,6 +120,12 @@ if [ $? -eq 0 ]; then
 	rm ~/.config/autostart/PostInstall.desktop
 fi
 
+REBOOT=$(whiptail --title "Reboot" --yesno "WiFi fix installed. Do you want to reboot for changes to take effect?" 10 60 10 3>&1 1>&2 2>&3)
+if [ $? -eq 0 ]; then
+	echo "\nRebooting.."
+	reboot
+fi
+
 echo "Press enter to quit."
 read
 # Install software
