@@ -28,6 +28,7 @@ Comment[vi]=Ứng dụng để quản lý và chơi trò chơi trên Steam
 Comment[zh_CN]=管理和进行 Steam 游戏的应用程序
 Comment[zh_TW]=管理並執行 Steam 遊戲的應用程式
 Exec=/usr/bin/steam-runtime -silent %U
+Hidden=true
 Icon=steam
 Terminal=false
 Type=Application

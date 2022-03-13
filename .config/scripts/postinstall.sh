@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+# set -e
 clear
 
 whiptail --msgbox --title "Arch Post Installation Script" "Welcome to the Arch Linux post installation script." 20 60 --ok-button "Next"
@@ -85,7 +85,7 @@ if [[ $DEVICE == "MBP" ]]; then
 	for mbp_choice in "${MBP_OPTIONS[@]}"; do
 		case $mbp_choice in
 			"TOUCHBAR")
-				paru -S macbook12-spi-driver-dkms
+				# paru -S macbook12-spi-driver-dkms
 				sudo mount /dev/nvme0n1p1 /mnt
 				sudo cp -R AppleEFI/Apple /mnt/EFI/
 				sudo umount /mnt
@@ -95,7 +95,7 @@ if [[ $DEVICE == "MBP" ]]; then
 				# git clone https://github.com/AshleighWilson/snd_hda_macbookpro
 				cd $HOME/Apps/snd_hda_macbookpro
 				sudo ./install.cirrus.driver.sh
-				sudo echo "blacklist snd_hda_codec_cs8409" >> /etc/modprobe.d/blacklist.conf
+				sudo sh -c 'echo "blacklist snd_hda_codec_cs8409" >> /etc/modprobe.d/blacklist.conf'
 				;;
 		esac
 	done
