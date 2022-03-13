@@ -86,10 +86,22 @@ if [[ $DEVICE == "MBP" ]]; then
 		case $mbp_choice in
 			"TOUCHBAR")
 				# paru -S macbook12-spi-driver-dkms
-				sudo mount /dev/nvme0n1p1 /mnt
-				sudo cp -R AppleEFI/Apple /mnt/EFI/
-				sudo umount /mnt
-				systemctl --user enable mbp-startup.service
+				# sudo mount /dev/nvme0n1p1 /mnt
+				# curl -O tftp://server.lan/AppleEFI.tar.bz2
+				# tar -jxvf AppleEFI.tar.bz2
+				# sudo cp -R AppleEFI/Apple /mnt/EFI/
+				# sudo umount /mnt
+				# rm -rf AppleEFI*
+				# systemctl --user enable mbp-startup.service
+				sudo git clone https://github.com/roadrunner2/macbook12-spi-driver.git /usr/src/applespi-0.1
+				sudo dkms install -m applespi -v 0.1
+				sudo cp $HOME/.config/systemd/user/mbp-startup.service /etc/systemd/system/
+				sudo systemctl enable mbp-startup
+
+				curl -O tftp://server.lan/AppleEFI.tar.bz2
+				tar -jxvf AppleEFI.tar.bz2
+				sudo cp -R AppleEFI/APPLE /boot/EFI/
+				rm -rf AppleEFI*
 				;;
 			"SOUND")
 				# git clone https://github.com/AshleighWilson/snd_hda_macbookpro
