@@ -118,6 +118,9 @@ DISABLE_POSTINSTALL=$(whiptail --title "Disable Post Install" --yesno "Do you wa
 if [ $? -eq 0 ]; then
 	rm ~/.config/autostart/PostInstall.desktop
 fi
+
+echo "Press enter to quit."
+read
 # Install software
 # BASE_SOFTWARE=($(whiptail --title "Software" --checklist --separate-output "Choose the software to install" 20 70 10 3>&1 1>&2 2>&3 \
 # 	"ESPANSO" "Privacy focused text expander" ON \
