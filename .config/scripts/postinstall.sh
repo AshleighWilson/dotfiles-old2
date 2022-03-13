@@ -93,7 +93,7 @@ if [[ $DEVICE == "MBP" ]]; then
 				# sudo umount /mnt
 				# rm -rf AppleEFI*
 				# systemctl --user enable mbp-startup.service
-				sudo git clone https://github.com/roadrunner2/macbook12-spi-driver.git /usr/src/applespi-0.1
+				sudo git clone https://github.com/PatrickVerner/macbook12-spi-driver.git /usr/src/applespi-0.1
 				sudo dkms install -m applespi -v 0.1
 				sudo cp $HOME/.config/systemd/user/mbp-startup.service /etc/systemd/system/
 				sudo systemctl enable mbp-startup
@@ -102,6 +102,7 @@ if [[ $DEVICE == "MBP" ]]; then
 				tar -jxvf AppleEFI.tar.bz2
 				sudo cp -R AppleEFI/APPLE /boot/EFI/
 				rm -rf AppleEFI*
+				sudo umount /boot
 				;;
 			"SOUND")
 				# git clone https://github.com/AshleighWilson/snd_hda_macbookpro
