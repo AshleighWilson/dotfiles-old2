@@ -28,6 +28,8 @@ require('plugins.nvim-tree') -- TODO: Configuration
 require('plugins.indent-blankline') -- TODO: Configuration
 require('plugins.suda') -- TODO: Configuration
 require('plugins.neorg') -- TODO: Configuration
+require('plugins.orgmode') -- TODO: Configuration
+
 
 -- Automatically install required plugins after fresh install.
 if packer_bootstrap then
