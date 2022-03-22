@@ -1,7 +1,7 @@
 -- Documentation: https://github.com/nvim-orgmode/orgmode
 PACKER.use {
 	'nvim-orgmode/orgmode',
-	requires = {},
+	requires = { 'akinsho/org-bullets.nvim' },
 	config = function()
 		require('orgmode').setup {
 			-- Load custom tree-sitter grammar for org filetype
@@ -24,5 +24,9 @@ PACKER.use {
 			org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
 			org_default_notes_file = '~/Dropbox/org/refile.org'
 		})
+
+		require("org-bullets").setup {
+			symbols = { "◉", "○", "✸", "✿" }
+		}
 	end
 }
