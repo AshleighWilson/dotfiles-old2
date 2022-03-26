@@ -97,11 +97,7 @@
     </property>
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-<<<<<<< Updated upstream
-      <property name="mpris-players" type="string" value="chromium.instance1169;chromium.instance1725;chromium.instance1737;chromium.instance1769;chromium.instance1828;chromium.instance1940;chromium.instance3175;chromium.instance69570;chromium.instance77962;chromium.instance922;firefox.instance1515;firefox.instance1573;firefox.instance1614;firefox.instance20467;firefox.instance902;plasma-browser-integration"/>
-=======
       <property name="mpris-players" type="string" value="chromium.instance1725;chromium.instance1737;chromium.instance1769;chromium.instance1828;chromium.instance1831;chromium.instance1940;chromium.instance2729;chromium.instance3455;chromium.instance5334;chromium.instance53546;chromium.instance69570;chromium.instance77962;firefox.instance1573;firefox.instance1614;firefox.instance20467;plasma-browser-integration"/>
->>>>>>> Stashed changes
     </property>
     <property name="clipman" type="empty">
       <property name="settings" type="empty">
