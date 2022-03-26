@@ -65,7 +65,7 @@
       <property name="ssharp" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Super&gt;s" type="string" value="pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1.monitor">
+      <property name="&lt;Super&gt;s" type="string" value="pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
     </property>
