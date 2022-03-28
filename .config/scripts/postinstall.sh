@@ -6,20 +6,26 @@ clear
 whiptail --msgbox --title "Arch Post Installation Script" "Welcome to the Arch Linux post installation script." 20 60 --ok-button "Next"
 
 # Obtain user password. This is used for running commands as root via sudo.
-PASSWORD=$(whiptail --title "User Password" --passwordbox "Please provide your user password. This is required to run commands as root via sudo." 10 60 3>&1 1>&2 2>&3) 
-if [ $? -ne 0 ]; then
-  echo "Installer cancelled. Exiting."
-  exit 1
-else
-	echo $PASSWORD | sudo -S echo "Authentication successful."
-fi
-
-
-curl -s "https://archlinux.org/mirrorlist/?country=GB&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 -
+# PASSWORD=$(whiptail --title "User Password" --passwordbox "Please provide your user password. This is required to run commands as root via sudo." 10 60 3>&1 1>&2 2>&3) 
+# if [ $? -ne 0 ]; then
+#   echo "Installer cancelled. Exiting."
+#   exit 1
+# else
+# 	echo $PASSWORD | sudo -S echo "Authentication successful."
+# fi
+#
+#
+# curl -s "https://archlinux.org/mirrorlist/?country=GB&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 -
+echo "Setting plank configuration.."
 cat $HOME/.config/plank/config.ini | dconf load /net/launchpad/plank/docks/
+
+echo "Enabling espanso.service.."
 systemctl --user enable --now espanso.service
 
+echo "Disabling post install script.."
 rm ~/.config/autostart/PostInstall.desktop
+
+echo "Post install complete."
 echo "Press enter to quit."
 read
 
