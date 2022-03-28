@@ -22,6 +22,14 @@ cat $HOME/.config/plank/config.ini | dconf load /net/launchpad/plank/docks/
 echo "Enabling espanso.service.."
 systemctl --user enable --now espanso.service
 
+echo "Setting XFCE window scale factor to 2.."
+xfconf-query -c xsettings -p /Gdk/WindowScalingFactor -s 2
+
+echo "Setting XFCE display scaling to 1.2.. (DISABLED)"
+
+echo "Setting font DPI to 331.."
+xfconf-query -c xsettings -p /Xft/DPI -s 192
+
 echo "Disabling post install script.."
 rm ~/.config/autostart/PostInstall.desktop
 
