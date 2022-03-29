@@ -20,6 +20,7 @@ echo "Setting plank configuration.."
 cat $HOME/.config/plank/config.ini | dconf load /net/launchpad/plank/docks/
 
 echo "Enabling espanso.service.."
+cp $HOME/.config/espanso/default.yml.template $HOME/.config/espanso/default.yml
 systemctl --user enable --now espanso.service
 
 echo "Setting XFCE window scale factor to 2.."
@@ -28,10 +29,15 @@ xfconf-query -c xsettings -p /Gdk/WindowScalingFactor -s 2
 echo "Setting XFCE display scaling to 1.2.. (DISABLED)"
 
 echo "Setting font DPI to 331.."
-xfconf-query -c xsettings -p /Xft/DPI -s 192
+xfconf-query -c xsettings -p /Xft/DPI -s 331
 
 echo "Disabling post install script.."
 rm ~/.config/autostart/PostInstall.desktop
+
+echo "Changing user password.."
+passwd
+echo "Changing root password.."
+sudo passwd
 
 echo "Post install complete."
 echo "Press enter to quit."
