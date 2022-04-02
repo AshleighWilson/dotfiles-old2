@@ -28,6 +28,9 @@ vim.opt.autoindent = true -- maintain indent of current line
 vim.opt.expandtab = false -- don't expand tabs into spaces
 vim.opt.shiftround = true
 
+-- Custom file types
+vim.cmd 'autocmd BufRead,BufNewFile *.rasi set filetype=css'
+
 -- Reload neovim and plugins when configs are updated
 vim.cmd([[
   augroup reload_config

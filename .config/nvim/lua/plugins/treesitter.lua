@@ -27,6 +27,7 @@ PACKER.use {
 			ensure_installed = {
 				"c",
 				"cpp",
+				"css",
 				"lua",
 				"norg",
 				"norg_meta",
