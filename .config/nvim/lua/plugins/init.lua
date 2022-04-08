@@ -30,6 +30,7 @@ require('plugins.suda') -- TODO: Configuration
 require('plugins.neorg') -- TODO: Configuration
 require('plugins.orgmode') -- TODO: Configuration
 require('plugins.colorizer') -- TODO:
+require('plugins.lastplace') -- TODO:
 
 -- Automatically install required plugins after fresh install.
 if packer_bootstrap then
