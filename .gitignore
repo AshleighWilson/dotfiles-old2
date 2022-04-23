@@ -1,0 +1,15 @@
+Nextcloud/
+vmware/
+.thunderbird/
+.mozilla/
+.ssh/
+.local/
+.config/dotbare/
+.config/discord
+.config/BraveSoftware
+.steam
+Downloads
+.cargo/
+.cache/
+.config/awesome/vicious/
+.config/xfce4/

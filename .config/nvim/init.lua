@@ -27,6 +27,10 @@ vim.opt.smarttab = true -- <tab>/<BS> indent/dedent in leading whitespace
 vim.opt.autoindent = true -- maintain indent of current line
 vim.opt.expandtab = false -- don't expand tabs into spaces
 vim.opt.shiftround = true
+vim.opt.wrap = false
+
+-- Custom file types
+vim.cmd 'autocmd BufRead,BufNewFile *.rasi set filetype=css'
 
 -- Reload neovim and plugins when configs are updated
 vim.cmd([[

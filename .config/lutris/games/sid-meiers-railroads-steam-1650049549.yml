@@ -1,0 +1,8 @@
+game:
+  appid: '7600'
+steam:
+  lsi_steam: false
+  quit_steam_on_exit: true
+system:
+  disable_runtime: true
+  prefer_system_libs: true

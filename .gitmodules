@@ -10,3 +10,9 @@
 [submodule "Apps/snd_hda_macbookpro"]
 	path = Apps/snd_hda_macbookpro
 	url = https://github.com/AshleighWilson/snd_hda_macbookpro
+[submodule ".config/awesome/battery-widget"]
+	path = .config/awesome/battery-widget
+	url = https://github.com/deficient/battery-widget
+[submodule ".config/awesome/plugins/vicious"]
+	path = .config/awesome/plugins/vicious
+	url = https://github.com/vicious-widgets/vicious
