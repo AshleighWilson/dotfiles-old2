@@ -1,0 +1,6 @@
+# Install acpilight package for screen brightness
+# Copy to /etc/udev/rules.d/
+# usermod -aG ashleigh video
+
+RUN+="/bin/chgrp video /sys/class/backlight/intel_backlight/brightness"
+RUN+="/bin/chmod g+w /sys/class/backlight/intel_backlight/brightness"
