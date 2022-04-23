@@ -3,22 +3,25 @@
 OPTIONS=(
 	lock
 	suspend
+	hibernate
 	logout
 	reboot
 	shutdown
 )
 
-choice=$(printf "%s\n" "${OPTIONS[@]}" | dmenu -i -p "shutdown menu")
+choice=$(printf "%s\n" "${OPTIONS[@]}" | dmenu -i -p "shutdown " -theme-str 'entry { enabled: false;}')
 
-if [ "$choice" == ${OPTIONS[0]} ]; then
+if [ "$choice" == "lock" ]; then
 	betterlockscreen -l
-elif [ "$choice" == ${OPTIONS[1]} ]; then
+elif [ "$choice" == "suspend" ]; then
 	systemctl suspend
-elif [ "$choice" == ${OPTIONS[2]} ]; then
+elif [ "$choice" == "hibernate" ]; then
+	systemctl hibernate
+elif [ "$choice" == "logout" ]; then
 	awesome-client 'awesome.quit()'
-elif [ "$choice" == ${OPTIONS[3]} ]; then
+elif [ "$choice" == "reboot" ]; then
 	systemctl reboot
-elif [ "$choice" == ${OPTIONS[4]} ]; then
+elif [ "$choice" == "shutdown" ]; then
 	systemctl poweroff
 else
 	echo "Exiting.."
