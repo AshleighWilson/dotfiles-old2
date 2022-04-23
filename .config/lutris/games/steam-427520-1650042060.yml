@@ -1,0 +1,6 @@
+system: {}
+steam:
+  quit_steam_on_exit: true
+game:
+  appid: '427520'
+null: {}
