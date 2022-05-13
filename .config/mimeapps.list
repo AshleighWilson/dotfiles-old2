@@ -1,0 +1,12 @@
+[Default Applications]
+x-scheme-handler/mailto=userapp-Thunderbird-NWWPJ1.desktop
+message/rfc822=userapp-Thunderbird-NWWPJ1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-NWWPJ1.desktop
+x-scheme-handler/msteams=teams.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-NWWPJ1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-NWWPJ1.desktop;
+image/jpeg=feh.desktop;gimp.desktop;brave-browser.desktop;
+application/pdf=org.gnome.Evince.desktop;
+image/png=feh.desktop;
