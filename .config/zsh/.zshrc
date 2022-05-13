@@ -22,6 +22,7 @@ setopt share_history
 # completion
 autoload -Uz compinit; compinit
 zstyle ':completion:*' menu select
+setopt completealiases
 
 # Pure prompt
 autoload -Uz promptinit; promptinit
