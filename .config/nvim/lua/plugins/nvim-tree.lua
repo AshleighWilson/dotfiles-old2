@@ -6,7 +6,13 @@ PACKER.use {
     },
     config = function() require('nvim-tree').setup {
     	actions = {
-		open_file = { quit_on_open = true }
-	}
+			open_file = { quit_on_open = true }
+		},
+		renderer = {
+			indent_markers = { enable = true }
+		}
     } end
 }
+
+-- Add trailing slash on folders
+vim.g.nvim_tree_add_trailing = 1

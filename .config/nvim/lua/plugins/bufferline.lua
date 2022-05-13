@@ -1,6 +1,7 @@
 -- https://github.com/akinsho/bufferline.nvim
 PACKER.use {
 	'akinsho/bufferline.nvim',
+	tag = "*",
 	requires = {'kyazdani42/nvim-web-devicons'},
 	config = function()
 		require('bufferline').setup {
@@ -16,7 +17,5 @@ PACKER.use {
 				}
 			},
 		}
-		vim.g.nvim_tree_indent_markers = 1
-		vim.g.nvim_tree_add_trailing = 1
   	end
 }

@@ -20,7 +20,9 @@ PACKER.use {
 			["<leader>np"] = { name = "+packer" },
 			["<leader>nps"] = { "<cmd>PackerSync<cr>", "Packer Sync" },
 
-			["<leader>p"] = { name = "+code" },
+			["<leader>c"] = { name = "+code" },
+			["<leader>cb"] = { "<cmd>make<cr>", "Build" },
+			["<leader>cu"] = { "<cmd>make all upload<cr>", "Build and Upload" },
 		},
 		{
 		})
