@@ -24,14 +24,25 @@ root.buttons(gears.table.join(
 
 globalkeys = gears.table.join(
 
-    -- Rofi launcher.
+    -- Rofi launcher
     awful.key({ modkey },            "r",     function () awful.util.spawn("rofi -show run") end,
               {description = "run launcher (rofi)", group = "launcher"}),
 
-    awful.key({ modkey },            "q",     function () awful.util.spawn_with_shell("$HOME/test.sh") end,
+	-- Keepmenu (keepass)
+    awful.key({ modkey },            "p",     function () awful.util.spawn_with_shell("keepmenu") end,
+              {description = "keepmenu (keepass) password manager", group = "system"}),
+
+	-- Shutdown menu
+    awful.key({ modkey },            "q",     function () awful.util.spawn_with_shell("$HOME/.config/scripts/shutdown.sh") end,
               {description = "shutdown menu", group = "system"}),
-    
-			  -- Awesome popup help (cheatsheet).
+
+	-- Screen brightness
+	awful.key({ }, "XF86MonBrightnessDown", function ()
+		awful.util.spawn("xbacklight -dec 10") end),
+	awful.key({ }, "XF86MonBrightnessUp", function ()
+		awful.util.spawn("xbacklight -inc 10") end),
+
+	-- Awesome popup help (cheatsheet).
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
 
@@ -67,7 +78,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
 
--- Move focused window up in the stack.
+	-- Move focused window up in the stack.
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
               {description = "focus the next screen", group = "screen"}),
 
