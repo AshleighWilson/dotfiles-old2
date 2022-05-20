@@ -1,0 +1,10 @@
+matches:
+
+  - trigger: "@@"
+    replace: "{{email}}"
+    vars:
+      - name: email
+        type: shell
+        params:
+          cmd: "cat ~/.ssh/email"
+
