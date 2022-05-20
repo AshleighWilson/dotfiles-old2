@@ -14,6 +14,9 @@ PACKER.use {
 				capabilities = capabilities,
 	 	}
 
+		-- python
+		require'lspconfig'.pyright.setup{}
+
 		-- lua (lua-language-server - https://github.com/sumneko/lua-language-server)
 		local runtime_path = vim.split(package.path, ';')
 		table.insert(runtime_path, "lua/?.lua")

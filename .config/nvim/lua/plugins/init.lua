@@ -12,25 +12,26 @@ PACKER = require('packer').startup(function(use)
 end)
 
 -- Load plugins
-require('plugins.lspconfig')
-require('plugins.nvim-cmp') -- TODO: Configuration
-require('plugins.luasnip')
-require('plugins.dashboard')
-require('plugins.comment') -- TODO: Configuration
-require('plugins.which-key') -- TODO: Configuration
-require('plugins.doom-one') -- TODO: Configuration
-require('plugins.treesitter') -- TODO: Configuration
-require('plugins.telescope') -- TODO: fzf-native, ripgrep, fd, lsp, devicons & configuration
-require('plugins.todo-comments') -- TODO: Configuration
-require('plugins.galaxyline') -- TODO: Configuration
-require('plugins.bufferline') -- TODO: Configuration
-require('plugins.nvim-tree') -- TODO: Configuration
-require('plugins.indent-blankline') -- TODO: Configuration
-require('plugins.suda') -- TODO: Configuration
-require('plugins.neorg') -- TODO: Configuration
-require('plugins.orgmode') -- TODO: Configuration
-require('plugins.colorizer') -- TODO:
-require('plugins.lastplace') -- TODO:
+require('plugins.lspconfig')		-- TODO:
+require('plugins.nvim-cmp')			-- TODO:
+require('plugins.luasnip')			-- TODO:
+require('plugins.dashboard')		-- TODO:
+require('plugins.comment')			-- TODO:
+require('plugins.which-key')		-- TODO:
+require('plugins.doom-one')			-- TODO:
+require('plugins.treesitter')		-- TODO:
+require('plugins.telescope')		-- TODO:
+require('plugins.todo-comments')	-- TODO:
+require('plugins.galaxyline')		-- TODO:
+require('plugins.bufferline')		-- TODO:
+require('plugins.nvim-tree')		-- TODO:
+require('plugins.indent-blankline') -- TODO:
+require('plugins.suda')				-- TODO:
+require('plugins.neorg')			-- TODO:
+require('plugins.orgmode')			-- TODO:
+require('plugins.colorizer')		-- TODO:
+require('plugins.lastplace')		-- TODO:
+require('plugins.gitsigns')			-- TODO:
 
 -- Automatically install required plugins after fresh install.
 if packer_bootstrap then
